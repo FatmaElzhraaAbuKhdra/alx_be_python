@@ -1,30 +1,34 @@
-# match_case_calculator.py
+def main():
+  """
+  This function prompts the user for input, performs the selected operation 
+  using a match case statement, and displays the result.
+  """
+  # Get user input for numbers
+  num1 = float(input("Enter the first number: "))
+  num2 = float(input("Enter the second number: "))
 
-# Prompt user for input
-num1 = float(input("Enter the first number: ").strip() ) # Use float to handle decimal numbers
-num2 = float(input("Enter the second number: ").strip())  # Use float to handle decimal numbers
-operator = input("Choose the operation (+, -, *, /): ").strip()  # Ask for the operation
+  # Get user input for operation
+  operation = input("Choose the operation (+, -, *, /): ")
 
-# Perform calculation based on the chosen operation using Match Case
-match operator:
-    case '+':
-        result = num1 + num2
-    case '-':
-        result = num1 - num2
-    case '*':
-        result = num1 * num2
-    case '/':
-        if num2 == 0:
-            print("Cannot divide by zero.")
-            exit()  # Exit the script if division by zero is attempted
+  # Perform calculation using match case
+  match operation:
+    case "+":
+      result = num1 + num2
+      print(f"The result is {result}.")
+    case "-":
+      result = num1 - num2
+      print(f"The result is {result}.")
+    case "*":
+      result = num1 * num2
+      print(f"The result is {result}.")
+    case "/":
+      if num2 == 0:
+        print("Cannot divide by zero.")
+      else:
         result = num1 / num2
+        print(f"The result is {result}.")
     case _:
-        print("Error: Invalid operation. Please enter +, -, *, or /.")
-        exit()  # Exit the script if the operation is invalid
+      print("Invalid operation. Please choose +, -, *, or /.")
 
-# Print result, formatting as integer if possible
-if result.is_integer():
-    result = int(result)  # Convert to integer if there’s no decimal part
-
-print(f"The result is {result}.")
-
+if __name__ == "__main__":
+  main()
