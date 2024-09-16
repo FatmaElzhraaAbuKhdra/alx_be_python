@@ -1,7 +1,7 @@
 
-task = input("Enter a task description: ")
-priority = input("Enter the priority level (high, medium, low): ").lower()
-time_bound = input("Is the task time-bound? (yes or no): ").lower()
+task = input("Enter a task description: ").strip()
+priority = input("Enter the priority level (high, medium, low): ").lower().strip()
+time_bound = input("Is the task time-bound? (yes or no): ").lower().strip()
 
 
 match priority:
@@ -13,7 +13,6 @@ match priority:
         priority_message = "This task is of low priority"
     case _:
         priority_message = "Unknown priority level"
-
 
 if time_bound == "yes":
     time_message = "that requires immediate attention today!"
