@@ -28,8 +28,8 @@ def main():
   if time_bound == "yes":
     reminder += " that requires immediate attention today!"
 
-  # Print the reminder
-  print(reminder)
+  # Print the reminder with a clear message
+  print(f"Reminder: {reminder}")  # Ensures "Reminder:" is included
 
 if __name__ == "__main__":
   main()
