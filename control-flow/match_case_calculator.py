@@ -1,9 +1,9 @@
 # match_case_calculator.py
 
 # Prompt user for input
-num1 = float(input("Enter the first number: "))  # Use float to handle decimal numbers
-num2 = float(input("Enter the second number: "))  # Use float to handle decimal numbers
-operator = input("Choose the operation (+, -, *, /): ")  # Ask for the operation
+num1 = float(input("Enter the first number: ").strip() ) # Use float to handle decimal numbers
+num2 = float(input("Enter the second number: ").strip())  # Use float to handle decimal numbers
+operator = input("Choose the operation (+, -, *, /): ").strip()  # Ask for the operation
 
 # Perform calculation based on the chosen operation using Match Case
 match operator:
