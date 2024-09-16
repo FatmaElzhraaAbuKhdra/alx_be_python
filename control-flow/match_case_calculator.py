@@ -22,5 +22,4 @@ match operator:
         else:
             result = num1 / num2
             print(f"The result is {result}.")
-    case _:
-        print("Error: Invalid operation. Please enter +, -, *, or /.")
+
