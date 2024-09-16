@@ -27,3 +27,4 @@ if result.is_integer():
     result = int(result)  # Convert to integer if there’s no decimal part
 
 print(f"The result is {result}.")
+
