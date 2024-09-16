@@ -1,11 +1,9 @@
 # match_case_calculator.py
 
-# Prompt for user input
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
 operator = input("Choose the operation (+, -, *, /): ")
 
-# Match case for selecting operation
 match operator:
     case '+':
         result = num1 + num2
