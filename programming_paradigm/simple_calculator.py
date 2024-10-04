@@ -1,36 +1,22 @@
-import unittest
-from simple_calculator import SimpleCalculator
+# simple_calculator.py
 
-class TestSimpleCalculator(unittest.TestCase):
+class SimpleCalculator:
+    """A simple calculator class that supports basic arithmetic operations."""
 
-    def setUp(self):
-        """Set up the SimpleCalculator instance before each test."""
-        self.calc = SimpleCalculator()
+    def add(self, a, b):
+        """Return the addition of a and b."""
+        return a + b
 
-    def test_addition(self):
-        """Test the addition method."""
-        self.assertEqual(self.calc.add(2, 3), 5)
-        self.assertEqual(self.calc.add(-1, 1), 0)
-        self.assertEqual(self.calc.add(10.5, 2.2), 12.7)  # Test with floats
+    def subtract(self, a, b):
+        """Return the subtraction of b from a."""
+        return a - b
 
-    def test_subtraction(self):
-        """Test the subtraction method."""
-        self.assertEqual(self.calc.subtract(5, 2), 3)
-        self.assertEqual(self.calc.subtract(10, -2), 12)
-        self.assertEqual(self.calc.subtract(3.14, 1.5), 1.64)  # Test with floats
+    def multiply(self, a, b):
+        """Return the multiplication of a and b."""
+        return a * b
 
-    def test_multiplication(self):
-        """Test the multiplication method."""
-        self.assertEqual(self.calc.multiply(4, 3), 12)
-        self.assertEqual(self.calc.multiply(-2, 5), -10)
-        self.assertEqual(self.calc.multiply(2.5, 2), 5.0)  # Test with floats
-
-    def test_division(self):
-        """Test the division method."""
-        self.assertEqual(self.calc.divide(10, 2), 5)
-        self.assertEqual(self.calc.divide(-6, 2), -3)  # Test with negative numbers
-        self.assertEqual(self.calc.divide(7.5, 1.5), 5.0)  # Test with floats
-        self.assertIsNone(self.calc.divide(10, 0))  # Test division by zero
-
-if __name__ == '__main__':
-    unittest.main()
+    def divide(self, a, b):
+        """Return the division of a by b. Returns None if b is zero."""
+        if b == 0:
+            return None
+        return a/b
